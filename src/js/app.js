@@ -4,24 +4,25 @@ function getRandomInt() {
 }
 let i;
 let rand;
-let classParent = "hole-game";
-let c = "hole";
+const classParent = 'hole-game';
+const c = 'hole';
 divParent.classList.add(classParent);
 document.body.appendChild(divParent);
 for (let index = 0; index < 16; index++) {
   const divEl = document.createElement('div');
   divEl.classList.add(c);
-  divEl.setAttribute("id", index);
+  divEl.setAttribute('id', index);
   divParent.appendChild(divEl);
 }
-  console.log(document.querySelectorAll('.hole'));
-  const but = document.querySelectorAll('.hole');
+console.log(document.querySelectorAll('.hole'));
+const but = document.querySelectorAll('.hole');
 setInterval(() => {
   for (let index = 0; index < but.length; index++) {
     const element = but[index];
-    if(element.classList.contains('hole_has-mole')){
-    element.classList.remove('hole_has-mole');
-    i = index;}
+    if (element.classList.contains('hole_has-mole')) {
+      element.classList.remove('hole_has-mole');
+      i = index;
+    }
   }
 }, 1000);
 

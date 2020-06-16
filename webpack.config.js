@@ -24,17 +24,13 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.html$/i,
-      //   use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
-      // },
       {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
-      {  
+      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
